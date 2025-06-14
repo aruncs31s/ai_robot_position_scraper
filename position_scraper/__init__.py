@@ -1,1 +1,1 @@
-from .position_scraper import extract_positions
+from .position_scraper import extract_positions , extract_names

@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="ai_robot_position_scraper",
-    version="0.0.5",
+    version="0.0.6",
     author="Arun CS",
     author_email="your.email@example.com",
     description="Position scraper library for AI-Robot",
