@@ -17,7 +17,15 @@ def extract_positions(url):
         define_positions[name] = value
 
     return define_positions
-
+def get_names(url):
+    response = requests.get(url)
+    response.raise_for_status()
+    content = response.text
+    
+    pattern_define = re.compile(r'#define\s+(\w+_INITIAL_POSITION)\s+\d+', re.MULTILINE)
+    names = [match.group(1) for match in pattern_define.finditer(content)]
+    
+    return names
 
 if __name__ == "__main__":
     define_positions = extract_positions(url)
